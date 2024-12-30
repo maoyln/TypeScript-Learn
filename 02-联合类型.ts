@@ -18,3 +18,12 @@ function greets(person: string | string[]): string | string[] {
 }
 
 console.log(greets(["a", "b", "c"]));
+
+
+type HttpMethod = "GET" | "POST" | "PUT" | "DELETE";
+
+function sendRequest(url: string, method: HttpMethod) {
+  // ...
+}
+
+sendRequest("https://example.com", "GET");
