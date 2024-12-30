@@ -1,4 +1,4 @@
-// 搞懂 TypeScript 联合类型的多个知识点！
+// TypeScript 联合类型的多个知识点！
 // https://juejin.cn/post/7095547569777934367?searchId=202412301344272392240D857FBF33BA65
 // Union Type
 function greet(person: string): string {
