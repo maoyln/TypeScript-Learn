@@ -23,3 +23,12 @@ type F3 = (a: number, b: string) => void;
 
 type F12 = F1 & F2;
 type F13 = F1 & F3;
+
+
+type A0 = 1 & number; // 1
+type A1 = '1' & string; // '1'
+type A2 = true & boolean; // true
+type A3 = null & string;
+type A4 = undefined & string;
+type A5 = void & string;
+type A6 = never & any;
