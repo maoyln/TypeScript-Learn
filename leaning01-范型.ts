@@ -1,3 +1,5 @@
+// TypeScript 泛型中的 T、K、V 等到底是个啥？
+
 function identity<T, U>(value: T, message: U): T {
   console.log(message);
   return value;
