@@ -33,3 +33,16 @@ type A4 = undefined & string; // never
 type A5 = void & string; // never
 type A6 = never & any; // never
 type A7 = number & string; // never
+
+
+interface D { d: boolean; }
+interface E { e: string; }
+interface F { f: number; }
+
+interface X { x: D }
+interface Y { x: E }
+interface Z { x: F }
+
+type XYZ = X & Y & Z;
+
+let xyz: XYZ = { x: { d: true, e: 'hello', f: 1 } };
