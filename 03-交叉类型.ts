@@ -49,8 +49,15 @@ let xyz: XYZ = { x: { d: true, e: 'hello', f: 1 } };
 
 type PartialByKeys<T, K extends keyof T> = {
   [P in K]?: T[P];
-}
+} & Pick<T, Exclude<keyof T, K>>;
+
+type Simplify<T> = {
+  [P in keyof T]: T[P];
+};
 
 type PartialXYZ = PartialByKeys<XYZ, 'x'>; // x变成可选
 
 type PartialXYZ2 = Partial<XYZ>; // 全部变成可选
+
+type SimplifyXYZ = Simplify<PartialXYZ>;
+type SimplifyXYZ2 = Simplify<PartialXYZ2>;
