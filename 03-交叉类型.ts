@@ -34,7 +34,7 @@ type A5 = void & string; // never
 type A6 = never & any; // never
 type A7 = number & string; // never
 
-
+// 对象类型
 interface D { d: boolean; }
 interface E { e: string; }
 interface F { f: number; }
