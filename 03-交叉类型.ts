@@ -46,3 +46,11 @@ interface Z { x: F }
 type XYZ = X & Y & Z;
 
 let xyz: XYZ = { x: { d: true, e: 'hello', f: 1 } };
+
+type PartialByKeys<T, K extends keyof T> = {
+  [P in K]?: T[P];
+}
+
+type PartialXYZ = PartialByKeys<XYZ, 'x'>; // x变成可选
+
+type PartialXYZ2 = Partial<XYZ>; // 全部变成可选
