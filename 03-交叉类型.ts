@@ -61,3 +61,20 @@ type PartialXYZ2 = Partial<XYZ>; // 全部变成可选
 
 type SimplifyXYZ = Simplify<PartialXYZ>;
 type SimplifyXYZ2 = Simplify<PartialXYZ2>;
+
+
+interface User {
+  name?: string;
+  age?: number;
+  email?: string;
+  password?: string;
+}
+
+// 制定部分属性为必填
+type RequiredByKeys<T, K extends keyof T> = {
+  [P in K]: T[P];
+} & {
+  [P in Exclude<keyof T, K>]: T[P];
+};
+
+type UserPartial = RequiredByKeys<User, 'name' | 'password'>;
