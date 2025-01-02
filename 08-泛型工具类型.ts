@@ -20,7 +20,8 @@ interface User {
   password?: string;
 }
 
-type PickUser = Pick<User, 'id' | 'name'>; 
+type PickUser = Pick<User, 'id' | 'name'>;
+
 
 // PickUser则为如下
 // interface User {
