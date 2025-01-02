@@ -9,3 +9,7 @@ type T2 = ToString<'maoyl'| 888 | true | -1212n> // 'maoyl | '888' | 'true' | '1
 
 type T3 = ToString<'foo' | 'bar' | 'baz'>; // 'fooChanged' | 'barChanged' | 'bazChanged'
 type T4 = Concat<'top' | 'bottom', 'left' | 'right'>; // top-left | top-right | bottom-left | bottom-right
+
+// 总结
+// 单个占位符的联合类型自动展开
+// 多个占位符的联合类型解析为叉积
