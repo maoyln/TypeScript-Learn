@@ -8,12 +8,19 @@
 
 
 // 最小的集合是包括单个值的集合
-// type A = 'A'; // 字面量类型
-// type B = 'B';
+// type A = 'A'; // 对 字面量类型
+// type B = 'B'; // 对 
+// type B = 'A'; // 错 
 
 // let a: A = 'a';
 // let b: B = 'b';
 
 // 两个值的集合:boolean true\false
 // type C = boolean; // boolean
+
+// 联合类型
+// type AB = 'A' | 'B'; // 联合类型
+// let a: AB = 'A'; // 对
+// let b: AB = 'B'; // 对
+// let c: AB = 'C'; // 对
 
