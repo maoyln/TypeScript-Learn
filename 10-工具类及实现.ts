@@ -1,3 +1,5 @@
+// 映射类型
+
 type MyPartialT<T> = {
   [P in keyof T]?: T[P];
 }
