@@ -23,3 +23,22 @@ let handler: PropChangeHandler = {
   nameChanged: () => {}, // 对的
   // ageChange: () => {} // 错的
 }
+
+const salaryObject = {
+  basicSalary: 3000, // 基本工资
+  gratuities: 500, // 绩效奖金
+  fullAttendanceAward: 200, // 全勤奖
+}
+
+// 举个例子
+function calculateSalary(salaryObject: {[key: string]: number}): number {
+  let total = 0;
+  for (const name in salaryObject) {
+    total += salaryObject[name];
+  }
+  return total;
+}
+
+let calculate = calculateSalary(salaryObject);
+
+console.log('应该拿报酬', calculate);
