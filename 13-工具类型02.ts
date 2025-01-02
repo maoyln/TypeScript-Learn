@@ -26,3 +26,8 @@ type Parameters1<T extends (...args: any) => any> = T extends (...args: infer P)
  * 获取函数类型的返回类型
  */
 type ReturnType1<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : any;
+
+/**
+ * 构造一个具有T属性的类型，K类型的属性除外。
+ */
+type Omit1<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;
