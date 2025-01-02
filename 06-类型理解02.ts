@@ -42,3 +42,7 @@ function calculateSalary(salaryObject: {[key: string]: number}): number {
 let calculate = calculateSalary(salaryObject);
 
 console.log('应该拿报酬', calculate);
+
+const user: Record<string, string> = {
+  name: 'myl'
+}
