@@ -19,7 +19,7 @@ let bbb: BBB = 'B'; // 对
 type DDD = boolean; // boolean
 
 // 联合类型
-type AAABBB = 'A' | 'B'; // 联合类型
+type AAABBB = 'A' | 'B'; // 联合类型 // 与其他文件重名了，所以用这个名字表示一下
 let ddd: AAABBB = 'A'; // 对
 let eee: AAABBB = 'B'; // 对
 // let fff: AAABBB = 'C'; // 错误
