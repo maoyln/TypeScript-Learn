@@ -26,3 +26,8 @@ type Foo = {
 }
 
  type SetOptional<T, K extends keyof T> = Simplify<Partial<Pick<T, K>> & Pick<T, Exclude<keyof T, K>>>
+
+ type SetRequired<T, K extends keyof T> = Simplify<Pick<T, Exclude<keyof T, K>> & Required<Pick<T, K>>>
+
+// 测试用例
+type SomeRequired = SetRequired<Foo, 'b' | 'c'>;
