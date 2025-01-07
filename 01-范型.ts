@@ -9,4 +9,5 @@ const a = identity<string, number>("hello", 1);
 const a1 = identity("hello", 1);
 
 console.log(a);
+console.log(a1);
 
