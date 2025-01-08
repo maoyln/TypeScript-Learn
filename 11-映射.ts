@@ -16,8 +16,6 @@
 // { readonly [P in K]?: T}
 // { -readonly [P in K]?: T}
 
-
-
 type Getters<T> = {
   [K in keyof T as `get${Capitalize<string & K>}`]: () => T[K];  // Capitalize单词首字母转大写
 }

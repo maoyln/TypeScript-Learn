@@ -17,9 +17,7 @@ type Person2 = {
     city: string;
   }
 };
-
-
-// Person1 与 Person2 相同
+// Person1 与 Person2 相同，说明可以使用typeof 对象去获取该对象的类型
 
 type Address1 = typeof lolo['address'];
 type Address2 = {
