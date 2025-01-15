@@ -51,8 +51,8 @@ type PartialByKeys<T, K extends keyof T> = {
   [P in K]?: T[P];
 } & Pick<T, Exclude<keyof T, K>>;
 
-type Simplify<T> = {
-  [P in keyof T]: T[P];
+type Simplify1<T> = {
+  [P in keyof T]?: T[P];
 };
 
 type PartialXYZ = PartialByKeys<XYZ, 'x'>; // x变成可选
